@@ -1,11 +1,34 @@
 {
+    "_id" : {"$oid":"53fdf37c34762329096bb5b1"},
+    "email" : "jill@jill.com",
+    "password" : "$2a$10$wXFSDwUfS0RqWtzHZAKpA.Oa41k4taAgqBAMiQEwlHepHmVnj22..",
+    "isvisible" : true,
+    "phone" : "123-123-1234",
+    "photo" : "http://i.annihil.us/u/prod/marvel//universe3zx/images/thumb/b/b5/JillStacy-LWeeks.jpg/406px-JillStacy-LWeeks.jpg",
+    "Tagline" : "hola",
+    "twitter" : "@jill",
+    "facebook" : "jill@fb"
+}
+{
   "_id" : {"$oid":"000000000000000000000001"},
   "email" : "bob@aol.com",
-  "password" : "$2a$10$XR.IQktUUujLBxed70GQn.jWY1wZ9ThM0Tar9wTqzkI4Uk1uP2Or2"
+  "password" : "$2a$10$XR.IQktUUujLBxed70GQn.jWY1wZ9ThM0Tar9wTqzkI4Uk1uP2Or2",
+  "isvisible" : true,
+  "phone" : "123-123-1234",
+  "photo" : "http://i.annihil.us/u/prod/marvel//universe3zx/images/thumb/b/b5/JillStacy-LWeeks.jpg/406px-JillStacy-LWeeks.jpg",
+  "Tagline" : "hola",
+  "twitter" : "@bob",
+  "facebook" : "bob@fb"
 }
 {
   "_id" : {"$oid":"000000000000000000000002"},
   "email" : "sue@aol.com",
-  "password" : "$2a$10$sjPx9TkrEASeXzH6uuDCDO.n1Sj/H2A/bu/9hBFfm5fm3Z4LzrEPa"
+  "password" : "$2a$10$sjPx9TkrEASeXzH6uuDCDO.n1Sj/H2A/bu/9hBFfm5fm3Z4LzrEPa",
+  "isvisible" : false,
+  "phone" : "123-123-1234",
+  "photo" : "http://i.annihil.us/u/prod/marvel//universe3zx/images/thumb/b/b5/JillStacy-LWeeks.jpg/406px-JillStacy-LWeeks.jpg",
+  "Tagline" : "hola",
+  "twitter" : "@sue",
+  "facebook" : "sue@fb"
 }
 

@@ -84,5 +84,42 @@ describe('users', function(){
       });
     });
   });
+  describe('get /users/bob@aol.com', function(){
+    it('should show a specific user', function(done){
+      request(app)
+      .get('/users/bob@aol.com')
+      .set('cookie', cookie)
+      .end(function(err, res){
+        expect(res.status).to.equal(200);
+        expect(res.text).to.include('bob@aol.com');
+        done();
+      });
+    });
+
+    it('should NOT show a specific user - not public', function(done){
+      request(app)
+      .get('/users/sue@aol.com')
+      .set('cookie', cookie)
+      .end(function(err, res){
+        expect(res.status).to.equal(302);
+        expect(res.headers.location).to.equal('/users');
+        done();
+      });
+    });
+  });
+
+  describe('post /message/3', function(){
+    it('should send a user a message', function(done){
+      request(app)
+      .post('/message/000000000000000000000002')
+      .set('cookie', cookie)
+      .send('mtype=text&message=hey')
+      .end(function(err, res){
+        expect(res.status).to.equal(302);
+        expect(res.headers.location).to.equal('/users/sue@aol.com');
+        done();
+      });
+    });
+  });
 });
 

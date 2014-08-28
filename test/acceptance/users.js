@@ -79,7 +79,7 @@ describe('users', function(){
         expect(res.status).to.equal(200);
         expect(res.text).to.include('bob');
         expect(res.text).to.include('jill');
-        expect(res.text).to.not.include('sue');
+        expect(res.text).to.include('sue');
         done();
       });
     });
@@ -116,7 +116,7 @@ describe('users', function(){
       .send('mtype=text&message=hey')
       .end(function(err, res){
         expect(res.status).to.equal(302);
-        expect(res.headers.location).to.equal('/users/sue@aol.com');
+        expect(res.headers.location).to.equal('/users/shrutijalewar@gmail.com');
         done();
       });
     });

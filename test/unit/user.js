@@ -45,16 +45,16 @@ describe('User', function(){
   describe('.findAllByIsvisible', function(){
     it('should get all the visible users from the database', function(done){
       User.findAllByIsvisible({isvisible:true}, function(err, users){
-        expect(users.length).to.equal(2);
+        expect(users.length).to.equal(4);
         done();
       });
     });
   });
   describe('.findOne', function(){
     it('should find a specific user', function(){
-      User.findOne({email:'bob@aol.com', isvisible:true}, function(err, user){
+      User.findOne({email:'shrutijalewar@gmail.com', isvisible:true}, function(err, user){
         console.log('+++++++++++', user);
-        expect(user.email).to.equal('bob@aol.com');
+        expect(user.email).to.equal('shrutijalewar@gmail.com');
       });
     });
   });
@@ -73,10 +73,10 @@ describe('User', function(){
   });
   describe('#send', function(){
     it('should send a mail message to a user', function(done){
-      User.findById('000000000000000000000001', function(err, sender){
-        User.findById('000000000000000000000002', function(err, receiver){
+      User.findById('000000000000000000000002', function(err, sender){
+        User.findById('000000000000000000000001', function(err, receiver){
           sender.send(receiver, {mtype:'email', message:'yo'}, function(err, response){
-            expect(response.sid).to.be.ok;
+            expect(response.id).to.be.ok;
             done();
           });
         });

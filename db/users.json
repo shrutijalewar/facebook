@@ -22,13 +22,25 @@
 }
 {
   "_id" : {"$oid":"000000000000000000000002"},
-  "email" : "sue@aol.com",
+  "email" : "shrutijalewar@gmail.com",
   "password" : "$2a$10$sjPx9TkrEASeXzH6uuDCDO.n1Sj/H2A/bu/9hBFfm5fm3Z4LzrEPa",
-  "isvisible" : false,
+  "isvisible" : true,
   "phone" : "615-496-3485",
   "photo" : "http://i.annihil.us/u/prod/marvel//universe3zx/images/thumb/b/b5/JillStacy-LWeeks.jpg/406px-JillStacy-LWeeks.jpg",
   "Tagline" : "hola",
   "twitter" : "@sue",
   "facebook" : "sue@fb"
+}
+
+{
+    "_id" : {"$oid":"53ff7d2dc70ed72611818451"},
+    "email" : "bhumi_8@yahoo.com",
+    "password" : "$2a$10$uwmMmVvB9QRxJvcFVd2os.Q5yFL6qQA7XmP/xJL7r/uoyA8OPRVCq",
+    "isvisible" : true,
+    "phone" : "615-525-4780",
+    "photo" : "http://i.annihil.us/u/prod/marvel//universe3zx/images/thumb/b/b5/JillStacy-LWeeks.jpg/406px-JillStacy-LWeeks.jpg",
+    "Tagline" : "hola",
+    "twitter" : "@bhumi",
+    "facebook" : "bhumi@fb"
 }
 

@@ -2,7 +2,8 @@
 
 var bcrypt = require('bcrypt'),
     Mongo  = require('mongodb'),
-    _      = require('lodash');
+    _      = require('lodash'),
+    Mailgun= require('mailgun-js');
 function User(){
 }
 
@@ -48,7 +49,7 @@ User.prototype.send = function(receiver, obj, cb){
       sendText(receiver.phone, obj.message, cb);
       break;
     case 'email':
-      sendEmail(this.email, receiver.email, obj.message, cb);
+      sendEmail(this.email, receiver.email, 'message from fb', obj.message, cb);
       break;
     case 'internal':
   }
@@ -82,19 +83,11 @@ function sendText(to, body, cb){
   client.messages.create({to:to, from:from, body:body}, cb);
 }
 
-function sendEmail(to, body, cb){
+function sendEmail(from, to, subject, message, cb){
   if(!to){return cb();}
-  var ApiKey = process.env.MAILAPIKEY,
-      domain = process.env.MAILDOMAIN,
-      Mailgun= require('mailgun-js'),
-      mailgun= new Mailgun({apiKey: ApiKey, domain:domain}),
-      data   = {
-        from:  this.email,
-        to: receiver.email,
-       // subject: 'Hi',
-        text: 'HUrray you got mail'
-      };
-  mailgun.messages().send(data, function(err, body){
-
-  });
+  var //ApiKey = process.env.MAILAPIKEY,
+      //domain = process.env.MAILDOMAIN,
+      mailgun= new Mailgun({apiKey: process.env.MAILAPIKEY, domain:process.env.MAILDOMAIN}),
+      data   = {from:from, to:to, subject:subject, html:message};
+  mailgun.messages().send(data, cb);
 }

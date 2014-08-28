@@ -14,7 +14,7 @@ after_script:
 env:
   global
     - DEBUG=1
-    - secure: Z/+csLA13fdnpbXgjMAnf9ftqwlU7/TdP8ogFjgU0LN1GryIQo2B4+imhptSE5bnuwj8qH5rONcOkd+HmuGXDgzbrmVMPjDc5RLs8lxQE+AK58iGOtU3ApumdmX9J+S0hnweic+9kJnH0Gq1nYRV+4C6d5i024nrCyhWioWP7tk=
-    - secure: JIw0ygMyJLlMzb8h43ltxPyXsR62X7HyUzuS9GQxQctrRmBvJdwkKdRh7fRZaKPFjMrZwmVn0LuUv2RDPZs7YSQN3h2OVDwALzU7GEWQyVCLUyGg1kAc8Yvb5KBck2km4dci6KYNaMifj5hdBEudC1GpBo7la/6NsibdDGvtc7A=
-    - secure: GHDF78Hnm5Tqf5M7DfrukPHXOr3Ow1z7U5Jr1PXDVGItzvUnP/Pg7X9ZTcI9IE1xuHAn5oZpKag002rKNS22bbjW8fNXIurYvfCcae/AZ9yhvLmZAMDEmzrQBXSD3JGjjTQmDRf3ztqYsbwtOAt2Jpqbioi5bBYuR3/A51I3I6k=
+    - secure: "Z/+csLA13fdnpbXgjMAnf9ftqwlU7/TdP8ogFjgU0LN1GryIQo2B4+imhptSE5bnuwj8qH5rONcOkd+HmuGXDgzbrmVMPjDc5RLs8lxQE+AK58iGOtU3ApumdmX9J+S0hnweic+9kJnH0Gq1nYRV+4C6d5i024nrCyhWioWP7tk="
+    - secure: "JIw0ygMyJLlMzb8h43ltxPyXsR62X7HyUzuS9GQxQctrRmBvJdwkKdRh7fRZaKPFjMrZwmVn0LuUv2RDPZs7YSQN3h2OVDwALzU7GEWQyVCLUyGg1kAc8Yvb5KBck2km4dci6KYNaMifj5hdBEudC1GpBo7la/6NsibdDGvtc7A="
+    - secure: "GHDF78Hnm5Tqf5M7DfrukPHXOr3Ow1z7U5Jr1PXDVGItzvUnP/Pg7X9ZTcI9IE1xuHAn5oZpKag002rKNS22bbjW8fNXIurYvfCcae/AZ9yhvLmZAMDEmzrQBXSD3JGjjTQmDRf3ztqYsbwtOAt2Jpqbioi5bBYuR3/A51I3I6k="
 

@@ -1,5 +1,7 @@
 ## name of project
 ### Code Badges
+[![Build Status](https://travis-ci.org/shrutijalewar/facebook.svg)](https://travis-ci.org/shrutijalewar/facebook)
+[![Coverage Status](https://coveralls.io/repos/shrutijalewar/facebook/badge.png)](https://coveralls.io/r/shrutijalewar/facebook)
 build status icon
 coverage status icon
 

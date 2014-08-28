@@ -48,6 +48,7 @@ User.prototype.send = function(receiver, obj, cb){
       sendText(receiver.phone, obj.message, cb);
       break;
     case 'email':
+      sendEmail(this.email, receiver.email, obj.message, cb);
       break;
     case 'internal':
   }
@@ -81,3 +82,19 @@ function sendText(to, body, cb){
   client.messages.create({to:to, from:from, body:body}, cb);
 }
 
+function sendEmail(to, body, cb){
+  if(!to){return cb();}
+  var ApiKey = process.env.MAILAPIKEY,
+      domain = process.env.MAILDOMAIN,
+      Mailgun= require('mailgun-js'),
+      mailgun= new Mailgun({apiKey: ApiKey, domain:domain}),
+      data   = {
+        from:  this.email,
+        to: receiver.email,
+       // subject: 'Hi',
+        text: 'HUrray you got mail'
+      };
+  mailgun.messages().send(data, function(err, body){
+
+  });
+}

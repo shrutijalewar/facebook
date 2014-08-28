@@ -71,11 +71,13 @@ User.prototype.save = function(o, cb){
 module.exports = User;
 
 function sendText(to, body, cb){
-  var accountSid = 'AC0c8135e8f58bed1140814bdf2257dd32',
-    authToken = process.env.TWILIO,
-    client = require('twilio')(accountSid, authToken);
+  if(!to){return cb();}
 
-  client.messages.create({to: to, from: '+14434874971', body: body}, cb);
+  var accountSid = process.env.TWSID,
+      authToken  = process.env.TWTOK,
+      from       = process.env.FROM,
+      client     = require('twilio')(accountSid, authToken);
 
+  client.messages.create({to:to, from:from, body:body}, cb);
 }
 
